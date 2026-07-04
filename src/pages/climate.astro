@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Climate Controls, Biomes & Climate Change" description="Climate, biomes, and climate change in Peru.">
+
+  <section class="bg-gradient-to-br from-green-700 to-emerald-900 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-green-300 uppercase tracking-widest text-sm mb-2">Earth Processes · Week 5</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">Climate Controls, Biomes & Climate Change</h1>
+      <p class="text-green-100 text-lg">From tropical rainforest to high-altitude desert — Peru has them all.</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <div class="bg-white rounded-2xl border border-dashed border-green-300 p-12 text-center shadow-sm">
+      <div class="text-5xl mb-4"></div>
+      <h2 class="text-2xl font-bold text-stone-700 mb-2">Content Coming Soon</h2>
+      <p class="text-stone-500 mb-6 max-w-md mx-auto">
+        This page will cover Peru's climate zones, major biomes, El Niño's impact, glacial retreat in the Andes, and Peru's climate change vulnerabilities.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
+        {[
+          { icon: "", title: "Climate Controls", desc: "Altitude, latitude, ocean currents, and orographic effects" },
+          { icon: "", title: "Biomes of Peru", desc: "Tropical rainforest, cloud forest, puna, and coastal desert" },
+          { icon: "", title: "Climate Change", desc: "Glacial retreat, El Niño intensification, and sea level rise" },
+        ].map(item => (
+          <div class="bg-green-50 rounded-xl p-4">
+            <div class="text-2xl mb-1">{item.icon}</div>
+            <h3 class="font-semibold text-stone-700 text-sm mb-1">{item.title}</h3>
+            <p class="text-stone-500 text-xs">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

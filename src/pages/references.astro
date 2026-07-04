@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="References" description="APA-format references for Peru earth science research.">
+
+  <section class="bg-gradient-to-br from-stone-700 to-stone-900 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-stone-400 uppercase tracking-widest text-sm mb-2">Academic Sources</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">References</h1>
+      <p class="text-stone-300 text-lg">All sources cited in alphabetized APA format, updated weekly.</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+
+    <!-- Week 1 sources -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-stone-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Week 1</span>
+        <h2 class="text-xl font-bold text-stone-700">Home & About — General Peru</h2>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm divide-y divide-stone-50">
+        {[
+          {
+            apa: `Central Intelligence Agency. (2024). <em>Peru</em>. In <em>The World Factbook</em>. https://www.cia.gov/the-world-factbook/countries/peru/`,
+          },
+          {
+            apa: `Church of Jesus Christ of Latter-day Saints. (2013). <em>Book of Mormon: Another testament of Jesus Christ</em>. The Church of Jesus Christ of Latter-day Saints.`,
+          },
+          {
+            apa: `INEI — Instituto Nacional de Estadística e Informática. (2023). <em>Perú: Principales indicadores departamentales 2015–2022</em>. https://www.inei.gob.pe/`,
+          },
+          {
+            apa: `Lonely Planet. (2024). <em>Introduction to Peru</em>. https://www.lonelyplanet.com/peru`,
+          },
+          {
+            apa: `National Geographic Society. (2024). <em>Peru</em>. https://www.nationalgeographic.com/travel/destination/peru`,
+          },
+          {
+            apa: `World Meteorological Organization. (2023). <em>Climate classification systems</em>. https://www.wmo.int/`,
+          },
+        ].map(ref => (
+          <div class="px-6 py-4">
+            <p class="text-stone-700 text-sm leading-relaxed" set:html={ref.apa} />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Placeholder for future weeks -->
+    {["Week 2", "Week 3", "Week 4", "Week 5"].map(week => (
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="bg-stone-200 text-stone-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">{week}</span>
+          <p class="text-stone-400 text-sm italic">Sources will be added as research progresses</p>
+        </div>
+        <div class="bg-stone-50 rounded-xl border border-dashed border-stone-200 p-6 text-center text-stone-400 text-sm">
+          References coming soon
+        </div>
+      </div>
+    ))}
+
+    <!-- APA style note -->
+    <div class="mt-10 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+      <h3 class="font-bold text-amber-800 mb-2"> APA 7th Edition Format Note</h3>
+      <p class="text-amber-700 text-sm leading-relaxed">
+        All references follow APA 7th edition formatting: Author, A. A. (Year). <em>Title of work: Capital letter also for subtitle</em>. Publisher. DOI or URL. References are listed in alphabetical order by first author's last name within each weekly section.
+      </p>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Plate Tectonics, Earthquakes & Volcanoes" description="Plate tectonics, earthquakes, and volcanoes of Peru.">
+
+  <section class="bg-gradient-to-br from-red-800 to-stone-900 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-red-300 uppercase tracking-widest text-sm mb-2">Earth Processes · Week 2</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">Plate Tectonics, Earthquakes & Volcanoes</h1>
+      <p class="text-red-100 text-lg">Peru sits on one of the most seismically active zones on the planet.</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <div class="bg-white rounded-2xl border border-dashed border-red-300 p-12 text-center shadow-sm">
+      <div class="text-5xl mb-4"></div>
+      <h2 class="text-2xl font-bold text-stone-700 mb-2">Content Coming Soon</h2>
+      <p class="text-stone-500 mb-6 max-w-md mx-auto">
+        This page will cover the Nazca Plate subduction under the South American Plate, Peru's earthquake history, and its volcanic arc.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
+        {[
+          { icon: "", title: "Nazca Plate Subduction", desc: "How ocean crust diving under South America built the Andes" },
+          { icon: "", title: "Earthquake History", desc: "Major seismic events including the 1970 Ancash earthquake" },
+          { icon: "", title: "Volcanic Arc", desc: "Peru's active and dormant volcanoes in the Southern Andes" },
+        ].map(item => (
+          <div class="bg-red-50 rounded-xl p-4">
+            <div class="text-2xl mb-1">{item.icon}</div>
+            <h3 class="font-semibold text-stone-700 text-sm mb-1">{item.title}</h3>
+            <p class="text-stone-500 text-xs">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

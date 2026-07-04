@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Home" description="Explore Peru's geography, culture, history, and earth science.">
+
+  <!-- Hero -->
+  <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1600&auto=format&fit=crop"
+      alt="Machu Picchu, Peru"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+    <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
+      <p class="text-red-300 uppercase tracking-widest text-sm mb-3 font-medium">Earth Science Exploration</p>
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 drop-shadow-lg">
+        Peru
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-200 mb-8 font-light">
+        Where the Andes meet the Amazon — a land shaped by ancient forces and living earth.
+      </p>
+      <div class="flex gap-3 justify-center flex-wrap">
+        <a href="/about" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-medium transition-colors">
+          About This Project
+        </a>
+        <a href="/plate-tectonics" class="px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-full font-medium transition-colors backdrop-blur-sm border border-white/30">
+          Explore Earth Processes
+        </a>
+      </div>
+    </div>
+    <!-- Caption -->
+    <p class="absolute bottom-4 right-4 text-white/60 text-xs">Machu Picchu, Cusco Region, Peru</p>
+  </section>
+
+  <!-- Quick facts bar -->
+  <section class="bg-red-700 text-white py-4">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+      <div><p class="text-red-200 text-xs uppercase tracking-wide">Capital</p><p class="font-bold text-lg">Lima</p></div>
+      <div><p class="text-red-200 text-xs uppercase tracking-wide">Population</p><p class="font-bold text-lg">~33.4 million</p></div>
+      <div><p class="text-red-200 text-xs uppercase tracking-wide">Area</p><p class="font-bold text-lg">1,285,216 km²</p></div>
+      <div><p class="text-red-200 text-xs uppercase tracking-wide">Official Language</p><p class="font-bold text-lg">Spanish & Quechua</p></div>
+    </div>
+  </section>
+
+  <!-- Historical & Cultural Overview -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-stone-800 mb-3">Historical & Cultural Overview</h2>
+      <p class="text-stone-500 max-w-xl mx-auto">Peru is one of the world's great cradles of civilization — a land with over 5,000 years of continuous human history.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- History -->
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-stone-800 mb-4">Historical Background</h3>
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Peru is home to some of the oldest civilizations in the Americas, including the <strong>Norte Chico civilization</strong> (~3000 BCE) and the <strong>Inca Empire</strong> (1438–1533 CE) — the largest empire in pre-Columbian America, stretching from modern-day Colombia to Chile.
+        </p>
+        <p class="text-stone-600 leading-relaxed">
+          In 1532, Spanish conquistadors led by Francisco Pizarro arrived, beginning the colonial era. Peru declared independence from Spain on <strong>July 28, 1821</strong>. Today it is a democratic republic with a rich multicultural identity blending Indigenous, Spanish, African, Asian, and European influences.
+        </p>
+      </div>
+
+      <!-- Culture -->
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-stone-800 mb-4">Culture & Society</h3>
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Peru's culture is deeply diverse. The country has <strong>47 recognized Indigenous languages</strong>, with Quechua being the most widely spoken after Spanish. Traditional festivals like <em>Inti Raymi</em> (Festival of the Sun) and <em>Carnival</em> celebrate a vibrant mix of Catholic and Indigenous traditions.
+        </p>
+        <p class="text-stone-600 leading-relaxed">
+          Peruvian cuisine is internationally acclaimed — dishes like <strong>ceviche, lomo saltado, and causa</strong> reflect the cultural blending that defines the country. Lima is now considered one of the top culinary destinations in the world.
+        </p>
+      </div>
+
+      <!-- Geography preview -->
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-stone-800 mb-4">Physical Geography</h3>
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Peru is divided into three major natural regions: the <strong>Costa</strong> (arid coastal desert), the <strong>Sierra</strong> (Andean highlands), and the <strong>Selva</strong> (Amazon rainforest). This geographic diversity gives Peru extraordinary biodiversity.
+        </p>
+        <p class="text-stone-600 leading-relaxed">
+          Peru contains <strong>~10% of the world's plant species</strong>, is among the top 5 most biodiverse countries on Earth, and hosts the world's highest navigable lake — <em>Lake Titicaca</em> at 3,812 m above sea level.
+        </p>
+      </div>
+
+      <!-- Economy -->
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 hover:shadow-md transition-shadow">
+        <h3 class="text-xl font-bold text-stone-800 mb-4">Economy</h3>
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Peru has one of Latin America's fastest-growing economies. It is one of the world's <strong>top producers of copper, gold, silver, zinc, and lead</strong> — all extracted from the Andes mountain range, making geology directly tied to national prosperity.
+        </p>
+        <p class="text-stone-600 leading-relaxed">
+          Other major sectors include <strong>agriculture</strong> (asparagus, blueberries, quinoa, coffee), <strong>tourism</strong> (Machu Picchu draws ~1.5 million visitors/year), and a growing <strong>tech and services sector</strong> centered in Lima.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo gallery row -->
+  <section class="bg-stone-100 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6 text-center">A Glimpse of Peru</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-md">
+          <img src="/andes.jpg" alt="Andes Mountains Peru" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-sm font-medium">The Andes Mountains</p>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-md">
+          <img src="/amazon.png" alt="Amazon Rainforest Peru" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-sm font-medium">Amazon Rainforest</p>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-md">
+          <img src="/titicaca.jpg" alt="Lake Titicaca Peru" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-sm font-medium">Lake Titicaca</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Earth Processes nav cards -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold text-stone-800 mb-8 text-center">Explore Earth Processes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      {[
+        { href: "/maps", label: "Maps & Location" },
+        { href: "/plate-tectonics", label: "Plate Tectonics" },
+        { href: "/weathering", label: "Weathering & Erosion" },
+        { href: "/fluvial", label: "Fluvial & Coastlines" },
+        { href: "/climate", label: "Climate & Biomes" },
+      ].map(card => (
+        <a
+          href={card.href}
+          class="bg-white border border-stone-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group"
+        >
+          <p class="text-sm font-semibold text-stone-700 group-hover:text-red-700 transition-colors">{card.label}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</Layout>

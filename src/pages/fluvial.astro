@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Fluvial Processes, Oceans & Coastlines" description="Rivers, oceans, and coastlines of Peru.">
+
+  <section class="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-blue-300 uppercase tracking-widest text-sm mb-2">Earth Processes · Week 4</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">Fluvial Processes, Oceans & Coastlines</h1>
+      <p class="text-blue-100 text-lg">The Amazon begins in Peru — and the Humboldt Current shapes its coast.</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <div class="bg-white rounded-2xl border border-dashed border-blue-300 p-12 text-center shadow-sm">
+      <div class="text-5xl mb-4"></div>
+      <h2 class="text-2xl font-bold text-stone-700 mb-2">Content Coming Soon</h2>
+      <p class="text-stone-500 mb-6 max-w-md mx-auto">
+        This page will cover Peru's river systems, the Amazon headwaters, the Humboldt Current, coastal dynamics, and the Pacific coastline.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
+        {[
+          { icon: "", title: "Amazon River System", desc: "The Amazon's headwaters originate in the Peruvian Andes" },
+          { icon: "", title: "Humboldt Current", desc: "Cold upwelling that drives Peru's marine ecosystem" },
+          { icon: "", title: "Pacific Coastline", desc: "Peru's 2,400 km of desert coast and coastal processes" },
+        ].map(item => (
+          <div class="bg-blue-50 rounded-xl p-4">
+            <div class="text-2xl mb-1">{item.icon}</div>
+            <h3 class="font-semibold text-stone-700 text-sm mb-1">{item.title}</h3>
+            <p class="text-stone-500 text-xs">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
