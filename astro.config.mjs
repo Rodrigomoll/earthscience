@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://Rodrigomoll.github.io',
-  base: 'earthscience',
+  base: '/earthscience/',
   integrations: [tailwind()],
 });
