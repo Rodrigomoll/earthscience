@@ -48,8 +48,61 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
+    <!-- Week 5 sources -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-stone-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Week 5</span>
+        <h2 class="text-xl font-bold text-stone-700">Weather, Climate & Biomes</h2>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm divide-y divide-stone-50">
+        {[
+          {
+            apa: `Beck, H. E., Zimmermann, N. E., McVicar, T. R., Vergopolan, N., Berg, A., & Wood, E. F. (2018). <em>Present and future Köppen-Geiger climate classification maps at 1-km resolution</em>. Scientific Data, 5, 180214.`,
+          },
+          {
+            apa: `Britannica. (2024). <em>Cinchona</em>. Encyclopædia Britannica. https://www.britannica.com/plant/Cinchona`,
+          },
+          {
+            apa: `Discover Peru. (n.d.). <em>Native crops of Peru: Potato</em>. https://www.discover-peru.org/native-crops-peru-potato/`,
+          },
+          {
+            apa: `El Robot de Platón. (n.d.). <em>Se viene un súper El Niño: ¿Qué lo hace diferente esta vez?</em> [Video]. YouTube. https://www.youtube.com/watch?v=oO0crrQ47-M`,
+          },
+          {
+            apa: `Economic Commission for Latin America and the Caribbean. (2017). <em>The effects of El Niño Costero on Peru: Damage assessment and economic losses</em>. ECLAC. https://www.cepal.org`,
+          },
+          {
+            apa: `Gadventures. (n.d.). <em>Alpaca to vicuña: Your guide to Peru's animals</em>. https://www.gadventures.com/blog/peru-animals/`,
+          },
+          {
+            apa: `JTG Travel. (n.d.). <em>The 9 most dangerous animals in Peru hiding in the shadows</em>. https://www.jtgtravel.com/south-america/peru/dangerous-animals-in-peru/`,
+          },
+          {
+            apa: `Machu Picchu Terra. (n.d.). <em>The 11 ecoregions of Peru</em>. https://www.machupicchuterra.com/guide/ecoregions-of-peru/`,
+          },
+          {
+            apa: `Project Peru. (n.d.). <em>Flora</em>. https://projectperu.org.uk/about-peru/flora/`,
+          },
+          {
+            apa: `ReliefWeb. (2024). <em>Wildfires tear across drought-stricken parts of Peru</em>. https://reliefweb.int/report/peru/wildfires-tear-across-drought-stricken-parts-peru`,
+          },
+          {
+            apa: `Servicio Nacional de Meteorología e Hidrología del Perú. (2024). <em>Heladas y friajes</em>. SENAMHI. https://www.senamhi.gob.pe/?p=heladas-y-friajes`,
+          },
+          {
+            apa: `Wikipedia. (2024). <em>Climate of Peru</em>. https://en.wikipedia.org/wiki/Climate_of_Peru`,
+          },
+        ].map(ref => (
+          <div class="px-6 py-4">
+            <p class="text-stone-700 text-sm leading-relaxed" set:html={ref.apa} />
+          </div>
+        ))}
+      </div>
+    </div>
+
     <!-- Placeholder for future weeks -->
-    {["Week 2", "Week 3", "Week 4", "Week 5"].map(week => (
+    {["Week 6"].map(week => (
       <div class="mb-6">
         <div class="flex items-center gap-3 mb-3">
           <span class="bg-stone-200 text-stone-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">{week}</span>

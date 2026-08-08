@@ -1,36 +1,295 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<Layout title="Climate Controls, Biomes & Climate Change" description="Climate, biomes, and climate change in Peru.">
+<Layout title="Weather, Climate & Biomes" description="Peru's global position, severe weather, Köppen climate zones, biomes, and native species.">
 
+  <!-- Hero -->
   <section class="bg-gradient-to-br from-green-700 to-emerald-900 text-white py-16 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-green-300 uppercase tracking-widest text-sm mb-2">Earth Processes · Week 5</p>
-      <h1 class="text-4xl md:text-5xl font-bold mb-3">Climate Controls, Biomes & Climate Change</h1>
-      <p class="text-green-100 text-lg">From tropical rainforest to high-altitude desert — Peru has them all.</p>
+      <p class="text-green-300 uppercase tracking-widest text-sm mb-2 font-medium">Earth Processes · Week 5</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">Weather, Climate & Biomes</h1>
+      <p class="text-green-100 text-lg max-w-2xl mx-auto">Global position, severe weather, Köppen climate zones, biomes, and the native plants and animals that define Peru.</p>
     </div>
   </section>
 
-  <div class="max-w-4xl mx-auto px-4 py-16">
-    <div class="bg-white rounded-2xl border border-dashed border-green-300 p-12 text-center shadow-sm">
-      <div class="text-5xl mb-4"></div>
-      <h2 class="text-2xl font-bold text-stone-700 mb-2">Content Coming Soon</h2>
-      <p class="text-stone-500 mb-6 max-w-md mx-auto">
-        This page will cover Peru's climate zones, major biomes, El Niño's impact, glacial retreat in the Andes, and Peru's climate change vulnerabilities.
-      </p>
-      <div class="grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
-        {[
-          { icon: "", title: "Climate Controls", desc: "Altitude, latitude, ocean currents, and orographic effects" },
-          { icon: "", title: "Biomes of Peru", desc: "Tropical rainforest, cloud forest, puna, and coastal desert" },
-          { icon: "", title: "Climate Change", desc: "Glacial retreat, El Niño intensification, and sea level rise" },
-        ].map(item => (
-          <div class="bg-green-50 rounded-xl p-4">
-            <div class="text-2xl mb-1">{item.icon}</div>
-            <h3 class="font-semibold text-stone-700 text-sm mb-1">{item.title}</h3>
-            <p class="text-stone-500 text-xs">{item.desc}</p>
-          </div>
-        ))}
+  <div class="max-w-5xl mx-auto px-4 py-16 space-y-20">
+
+    <!-- ─── SECTION 1: GLOBAL POSITION & WEATHER PATTERNS ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 1</div>
+        <h2 class="text-2xl font-bold text-stone-800">Global Position & Weather Patterns</h2>
       </div>
-    </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-7 mb-6">
+        <p class="text-stone-600 leading-relaxed mb-4">
+          Peru sits on the west coast of South America between roughly <strong>0° and 18° south latitude</strong>, placing almost the entire country within the tropics. Latitude alone would predict a hot, wet climate everywhere — but Peru's position relative to three global systems (circulation cells, the Humboldt Current, and the wind belts) overrides that expectation and produces one of the most climatically diverse countries on Earth.
+        </p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-green-50 rounded-xl p-4 border border-green-100">
+            <h4 class="font-bold text-green-800 text-sm mb-2">Global Circulation Cells</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">Peru lies within the <strong>Hadley cell</strong>, the circulation loop that carries warm, moist air upward near the equator and sinks it back down around 30° latitude. Peru's coast sits under the <strong>sinking, drying branch</strong> of this cell, while the Amazon (east of the Andes) sits closer to the rising, rain-producing branch near the equator — explaining why one half of the country is desert and the other half is rainforest.</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-4 border border-green-100">
+            <h4 class="font-bold text-green-800 text-sm mb-2">Global Precipitation Patterns</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">Peru straddles the seasonal path of the <strong>Intertropical Convergence Zone (ITCZ)</strong>, the belt of heavy rainfall where trade winds from both hemispheres converge. Its shifting position drives the Amazon's wet season. Meanwhile, the coast falls under a <strong>subtropical high-pressure zone</strong> — the same pressure pattern that creates the Sahara and Atacama deserts — which suppresses rainfall almost entirely along the Pacific coast.</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-4 border border-green-100">
+            <h4 class="font-bold text-green-800 text-sm mb-2">Wind Belt Systems</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">Peru's coast lies within the <strong>southeast trade winds</strong>, which blow northward along the coastline and drive the cold <strong>Humboldt (Peru) Current</strong>. These same winds push warm surface water offshore, causing cold, nutrient-rich water to rise (upwelling). The cold air above it holds little moisture, reinforcing the coastal desert even though Peru sits at tropical latitude.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-7">
+        <h3 class="text-lg font-bold text-stone-800 mb-4">Why Three Regions, Three Climates</h3>
+        <p class="text-stone-600 leading-relaxed">
+          The combination of these global systems with the <strong>Andes Mountains</strong> — which run the full length of the country and force air to rise and cool — divides Peru into its three classic natural regions. The <strong>Costa</strong> sits under the dry, sinking Hadley branch and the cold Humboldt Current, producing desert. The <strong>Sierra</strong> gains extreme temperature variation and its own rain patterns from elevation. The <strong>Selva</strong> (Amazon) receives moisture carried inland by the trade winds and convergence near the ITCZ, producing one of the wettest regions on the planet. No other country combines a Hadley-cell desert, a full mountain range, and equatorial rainforest within such a short east–west distance.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 2: SEVERE WEATHER ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 2</div>
+        <h2 class="text-2xl font-bold text-stone-800">Severe Weather</h2>
+      </div>
+
+      <div class="rounded-xl overflow-hidden mb-6 h-64 shadow-sm">
+        <img src={`${base}floodPeru.png`} alt="Flooding caused by heavy rains in Peru" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+
+      <p class="text-stone-600 leading-relaxed mb-6">
+        Peru rarely experiences hurricanes or tornadoes — the cold Humboldt Current keeps coastal waters below the ~26°C threshold tropical cyclones need to form, and Peru sits outside the main tornado-favorable wind-shear zones. Instead, its severe weather is tied directly to elevation and the El Niño–La Niña cycle.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">El Niño Coastal Flooding</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Every 3–7 years, warm Pacific water suppresses the Humboldt Current and triggers torrential rain on the normally arid coast. The <strong>2017 El Niño Costero</strong> killed 162 people and damaged over 200,000 homes in northern Peru (ECLAC, 2017).</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">Huaicos (Debris Flows)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Intense Andean rain saturates steep, loose slopes and triggers fast-moving mudslides called <em>huaicos</em>. They regularly destroy roads and homes in Lima's river valleys and highland towns during the rainy season (December–April).</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">Heladas (Andean Frosts)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Between April and September, sudden temperature drops in high-altitude zones (Puno, Cusco, Arequipa) can fall below −20°C. Heladas kill alpaca herds and destroy potato crops, threatening food security for rural highland families (SENAMHI, 2024).</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">Friaje (Amazon Cold Snaps)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Cold air masses from southern South America occasionally push into the normally hot Amazon basin (Loreto, Ucayali, Madre de Dios), dropping temperatures more than 10°C in hours and causing respiratory illness outbreaks (SENAMHI, 2024).</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">Drought</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">La Niña years strengthen the Humboldt Current and dry the highlands further. The 2022–23 Andean drought was described by Peru's weather service as one of the worst in 50 years, killing alpacas and withering potato crops (Malay Mail, 2022).</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-5">
+          <h4 class="font-bold text-stone-800 text-sm mb-2">Wildfires</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Drought conditions combined with agricultural burning have driven a sharp rise in wildfires across the Andes and Amazon border regions, damaging farmland and forest in recent dry seasons (ReliefWeb, 2024).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 3: CLIMATE CLASSIFICATION (KÖPPEN) ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 3</div>
+        <h2 class="text-2xl font-bold text-stone-800">Climate Classification (Köppen)</h2>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-7 mb-6">
+        <p class="text-stone-600 leading-relaxed mb-5">
+          Peru contains four of the five major Köppen climate groups — a level of diversity almost no other country matches within a single east–west cross-section. Elevation and the Humboldt Current are the two biggest drivers.
+        </p>
+        <div class="rounded-xl overflow-hidden mb-2 bg-stone-50 flex justify-center">
+          <img src={`${base}PeruKoppen.webp`} alt="Köppen climate classification map of Peru" class="max-h-[520px] w-auto object-contain" loading="lazy" />
+        </div>
+        <p class="text-stone-400 text-xs text-center">Köppen–Geiger climate classification map of Peru (Beck et al., 2018).</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
+          <h4 class="font-bold text-amber-800 text-sm mb-1">BWh / BWk — Coastal Desert</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Hot desert (BWh) around Lima and Talara, cool desert (BWk) further south near Tacna. Almost no rainfall year-round; temperatures moderated by the cold Humboldt Current, which also produces frequent coastal fog (<em>garúa</em>).</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+          <h4 class="font-bold text-blue-800 text-sm mb-1">Cwb / Cwc — Andean Highlands</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Temperate climate with a dry winter and mild, rainy summer. Found in Andean valleys (Cusco, Arequipa, Ayacucho). Large daily temperature swings — warm days, near-freezing nights — are typical.</p>
+        </div>
+        <div class="bg-stone-100 rounded-xl p-5 border border-stone-200">
+          <h4 class="font-bold text-stone-700 text-sm mb-1">ET — Highland Tundra (Puna)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Above roughly 4,000–4,800 m, average temperatures stay near or below 10°C year-round. This zone covers the high puna grasslands and the permanent snowline of the highest peaks.</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+          <h4 class="font-bold text-green-800 text-sm mb-1">Af / Am — Tropical Amazon</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Tropical rainforest (Af) with rain in every month, and tropical monsoon (Am) with a shorter drier season, cover Peru's eastern lowlands. Hot, humid, and consistently wet — the source of Peru's rainforest biodiversity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 4: BIOMES ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 4</div>
+        <h2 class="text-2xl font-bold text-stone-800">Biomes</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-sm">
+          <img src={`${base}islas_ballestas.jpg`} alt="Peru's coastal desert biome" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-xs font-medium">Coastal Desert</p>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-sm">
+          <img src={`${base}puna-altiplano.jpg`} alt="Andean puna grassland biome" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-xs font-medium">Puna (Andean Grassland)</p>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden aspect-video shadow-sm">
+          <img src={`${base}amazon.png`} alt="Amazon rainforest biome" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-3">
+            <p class="text-white text-xs font-medium">Amazon Rainforest</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-7 mb-6">
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Peruvian biologist Antonio Brack identified <strong>eleven distinct ecoregions</strong> in Peru, but they group into three main biomes matching the Costa, Sierra, and Selva: the hyper-arid <strong>coastal desert</strong>, the <strong>puna</strong> (high-altitude grassland above the treeline, plus smaller cloud forest patches on the Andes' eastern slopes), and the <strong>Amazon rainforest</strong>, which alone covers about 59% of the country's territory and is Peru's most biodiverse biome (Machu Picchu Terra, n.d.).
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm p-7">
+        <h3 class="text-lg font-bold text-stone-800 mb-3">Do These Biomes Unite or Divide Society?</h3>
+        <p class="text-stone-600 leading-relaxed mb-3">
+          Historically, more <strong>divide</strong> than unite. The Andes physically separate the three biomes, and each developed a distinct economy, culture, and identity: a coastal, urban, export-driven population; an Andean, agrarian, largely Indigenous highland population; and a dispersed, forest-based Amazonian population. This split maps closely onto Peru's long-standing regional inequality — wealth, infrastructure, and political power concentrate on the coast (especially Lima), while highland and jungle regions have historically had less access to healthcare, education, and paved roads.
+        </p>
+        <p class="text-stone-600 leading-relaxed">
+          At the same time, this biome diversity is a source of national pride and unity — Peruvians widely identify with the idea that their country holds desert, mountain, and jungle together, and cuisine, folklore, and tourism increasingly blend ingredients and traditions from all three regions rather than keeping them separate.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 5: NATIVE PLANTS ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 5</div>
+        <h2 class="text-2xl font-bold text-stone-800">Native Plants</h2>
+      </div>
+
+      <div class="rounded-xl overflow-hidden mb-6 h-56 shadow-sm">
+        <img src={`${base}papaNativa.jpeg`} alt="Native Peruvian potato varieties" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+          <h4 class="font-bold text-green-800 text-sm mb-1">Potato (Papa)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Peru is the potato's center of domestication, with thousands of native varieties still grown in the Andes today — the country's most important staple food (Discover Peru, n.d.).</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+          <h4 class="font-bold text-green-800 text-sm mb-1">Quinoa</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">A protein-rich Andean grain that was a staple of Inca agriculture and is now recognized globally for its nutritional value and food-security potential.</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+          <h4 class="font-bold text-green-800 text-sm mb-1">Cinchona (Quina)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Peru's national tree, and the original source of <strong>quinine</strong>, the first effective treatment for malaria (Britannica, 2024). Its bark remains a landmark contribution of Andean flora to world medicine.</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+          <h4 class="font-bold text-green-800 text-sm mb-1">Coca & Maca</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Coca leaf has been chewed for over 6,500 years to cope with altitude and fatigue and holds deep cultural significance; maca root is an Andean staple used traditionally as a nutritional and energy supplement.</p>
+        </div>
+      </div>
+
+      <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
+        <h4 class="font-bold text-red-800 text-sm mb-2">Dangerous Plant: Floripondio (Brugmansia)</h4>
+        <p class="text-stone-600 text-sm leading-relaxed">Also called angel's trumpet, this native flowering plant is highly toxic and hallucinogenic. It was used in traditional Andean shamanic ceremonies but can cause severe poisoning, hallucinations, or death if ingested improperly (Project Peru, n.d.).</p>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 6: NATIVE ANIMALS ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Section 6</div>
+        <h2 class="text-2xl font-bold text-stone-800">Native Animals</h2>
+      </div>
+
+      <div class="rounded-xl overflow-hidden mb-6 h-56 shadow-sm">
+        <img src={`${base}vicunia.webp`} alt="Vicuña, a wild Andean camelid native to Peru" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+          <h4 class="font-bold text-blue-800 text-sm mb-1">Llama & Alpaca</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Domesticated Andean camelids used for centuries as pack animals (llama) and for their fine wool (alpaca) — both essential to highland transport, textiles, and food.</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+          <h4 class="font-bold text-blue-800 text-sm mb-1">Vicuña</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">A wild camelid and Peru's national animal, prized by the Inca for its extremely fine fiber. Once endangered, conservation programs have helped its population recover (Gadventures, n.d.).</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+          <h4 class="font-bold text-blue-800 text-sm mb-1">Guinea Pig (Cuy)</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">Domesticated in the Andes since pre-Inca times, the cuy remains an important traditional food source and cultural dish in highland Peru.</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+          <h4 class="font-bold text-blue-800 text-sm mb-1">Andean Condor</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">One of the world's largest flying birds and a powerful cultural symbol across the Andes, representing power and freedom in Indigenous tradition.</p>
+        </div>
+      </div>
+
+      <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
+        <h4 class="font-bold text-red-800 text-sm mb-2">Dangerous Species: Bushmaster & Poison Dart Frogs</h4>
+        <p class="text-stone-600 text-sm leading-relaxed">The <strong>bushmaster</strong>, found in the Amazon, is the largest venomous snake in the Western Hemisphere, growing over 3.5 meters long (JTG Travel, n.d.). The Amazon is also home to brightly colored <strong>poison dart frogs</strong>, whose skin secretions were historically used by Indigenous hunters to tip blow darts.</p>
+      </div>
+    </section>
+
+    <!-- ─── VIDEO ─── -->
+    <section>
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Video</div>
+        <h2 class="text-2xl font-bold text-stone-800">Watch: The Next Super El Niño</h2>
+      </div>
+      <div class="bg-white rounded-2xl border border-stone-100 shadow-sm overflow-hidden">
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/oO0crrQ47-M"
+            title="Se Viene un Súper El Niño: ¿Qué lo Hace Diferente Esta Vez?"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="p-5">
+          <p class="text-stone-600 text-sm leading-relaxed"><em>"Se Viene un Súper El Niño: ¿Qué lo Hace Diferente Esta Vez?"</em> by El Robot de Platón explains what drives El Niño events and why the next one could behave differently than those of the past — directly tied to why Peru's coastal climate is so unstable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CITATIONS ─── -->
+    <section class="bg-white rounded-2xl border border-stone-100 shadow-sm p-8">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">References (APA Format)</h2>
+      <ul class="space-y-4 text-stone-600 text-sm leading-relaxed">
+        <li><p>Beck, H. E., Zimmermann, N. E., McVicar, T. R., Vergopolan, N., Berg, A., & Wood, E. F. (2018). <em>Present and future Köppen-Geiger climate classification maps at 1-km resolution</em>. Scientific Data, 5, 180214. <a href="https://commons.wikimedia.org/wiki/File:Peru_map_of_K%C3%B6ppen_climate_classification.svg" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://commons.wikimedia.org</a></p></li>
+        <li><p>Britannica. (2024). <em>Cinchona</em>. Encyclopædia Britannica. <a href="https://www.britannica.com/plant/Cinchona" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.britannica.com/plant/Cinchona</a></p></li>
+        <li><p>Discover Peru. (n.d.). <em>Native crops of Peru: Potato</em>. <a href="https://www.discover-peru.org/native-crops-peru-potato/" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.discover-peru.org/native-crops-peru-potato/</a></p></li>
+        <li><p>El Robot de Platón. (n.d.). <em>Se viene un súper El Niño: ¿Qué lo hace diferente esta vez?</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=oO0crrQ47-M" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.youtube.com/watch?v=oO0crrQ47-M</a></p></li>
+        <li><p>Economic Commission for Latin America and the Caribbean. (2017). <em>The effects of El Niño Costero on Peru: Damage assessment and economic losses</em>. ECLAC. <a href="https://www.cepal.org" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.cepal.org</a></p></li>
+        <li><p>Gadventures. (n.d.). <em>Alpaca to vicuña: Your guide to Peru's animals</em>. <a href="https://www.gadventures.com/blog/peru-animals/" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.gadventures.com/blog/peru-animals/</a></p></li>
+        <li><p>JTG Travel. (n.d.). <em>The 9 most dangerous animals in Peru hiding in the shadows</em>. <a href="https://www.jtgtravel.com/south-america/peru/dangerous-animals-in-peru/" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.jtgtravel.com/south-america/peru/dangerous-animals-in-peru/</a></p></li>
+        <li><p>Machu Picchu Terra. (n.d.). <em>The 11 ecoregions of Peru</em>. <a href="https://www.machupicchuterra.com/guide/ecoregions-of-peru/" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.machupicchuterra.com/guide/ecoregions-of-peru/</a></p></li>
+        <li><p>Project Peru. (n.d.). <em>Flora</em>. <a href="https://projectperu.org.uk/about-peru/flora/" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://projectperu.org.uk/about-peru/flora/</a></p></li>
+        <li><p>ReliefWeb. (2024). <em>Wildfires tear across drought-stricken parts of Peru</em>. <a href="https://reliefweb.int/report/peru/wildfires-tear-across-drought-stricken-parts-peru" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://reliefweb.int/report/peru/wildfires-tear-across-drought-stricken-parts-peru</a></p></li>
+        <li><p>Servicio Nacional de Meteorología e Hidrología del Perú. (2024). <em>Heladas y friajes</em>. SENAMHI. <a href="https://www.senamhi.gob.pe/?p=heladas-y-friajes" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://www.senamhi.gob.pe/?p=heladas-y-friajes</a></p></li>
+        <li><p>Wikipedia. (2024). <em>Climate of Peru</em>. <a href="https://en.wikipedia.org/wiki/Climate_of_Peru" target="_blank" rel="noopener" class="text-blue-700 underline hover:text-blue-900">https://en.wikipedia.org/wiki/Climate_of_Peru</a></p></li>
+        <li class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+          <p class="text-blue-800"><strong>AI Use Disclosure:</strong> Claude (Anthropic, 2026) was used as a research assistant to search for and organize sources on Peru's global circulation position, Köppen climate zones, biomes, and native species, and to draft this page's structure. All facts and figures were checked against the government, academic, and encyclopedia sources listed above before inclusion. Claude AI was not used as a primary source.</p>
+        </li>
+      </ul>
+    </section>
+
   </div>
 </Layout>
